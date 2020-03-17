@@ -8,6 +8,8 @@ class Bearing {
             compass = Compass.East;
         } else if (compass == Compass.East) {
             compass = Compass.South;
+        } else if (compass == Compass.South) {
+            compass = Compass.West;
         }
     }
 

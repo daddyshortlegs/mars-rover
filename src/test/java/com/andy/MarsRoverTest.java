@@ -37,6 +37,11 @@ public class MarsRoverTest {
         assertEquals("0:0:S", moveRover("RR"));
     }
 
+    @Test
+    public void shouldFaceWest_whenRoverTurnsRightThrice() {
+        assertEquals("0:0:W", moveRover("RRR"));
+    }
+
     private String moveRover(String command) {
         Grid grid = new Grid();
         MarsRover marsRover = new MarsRover(grid);
