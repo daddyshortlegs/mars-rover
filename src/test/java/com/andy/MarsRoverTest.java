@@ -68,8 +68,10 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void shouldMoveRight() {
+    public void shouldRotateRightAndMove() {
         assertEquals("1:0:E", moveRover("RM"));
+        assertEquals("2:0:E", moveRover("RMM"));
+        assertEquals("0:2:N", moveRover("RRRRMM"));
     }
 
     private String moveRover(String command) {
