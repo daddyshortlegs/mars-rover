@@ -26,6 +26,12 @@ public class MarsRoverTest {
         assertEquals(moveRover("MMMMMMMMMM"), "0:0:N");
     }
 
+    @Test
+    public void shouldFaceEast_whenRoverTurnsRight() {
+        assertEquals(moveRover("R"), "0:0:E");
+
+    }
+
     private String moveRover(String command) {
         Grid grid = new Grid();
         MarsRover marsRover = new MarsRover(grid);
