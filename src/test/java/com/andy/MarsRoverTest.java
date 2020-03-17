@@ -67,6 +67,11 @@ public class MarsRoverTest {
         assertEquals("0:0:N", moveRover("LLLL"));
     }
 
+    @Test
+    public void shouldMoveRight() {
+        assertEquals("1:0:E", moveRover("RM"));
+    }
+
     private String moveRover(String command) {
         Grid grid = new Grid();
         MarsRover marsRover = new MarsRover(grid);
