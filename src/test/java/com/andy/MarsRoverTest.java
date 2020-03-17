@@ -8,34 +8,34 @@ import static org.junit.Assert.assertEquals;
 public class MarsRoverTest {
     @Test
     public void shouldNotMove() {
-        assertEquals(moveRover(""), "0:0:N");
+        assertEquals("0:0:N", moveRover(""));
     }
 
     @Test
     public void shouldMoveNorthOneSquare() {
-        assertEquals(moveRover("M"), "0:1:N");
+        assertEquals("0:1:N", moveRover("M"));
     }
 
     @Test
     public void shouldMoveNorthNSquares() {
-        assertEquals(moveRover("MM"), "0:2:N");
-        assertEquals(moveRover("MMM"), "0:3:N");
+        assertEquals("0:2:N", moveRover("MM"));
+        assertEquals("0:3:N", moveRover("MMM"));
     }
 
     @Test
     public void shouldWrapAroundWhenEdgeOfWorld() {
-        assertEquals(moveRover("MMMMMMMMMM"), "0:0:N");
+        assertEquals("0:0:N", moveRover("MMMMMMMMMM"));
     }
 
     @Test
     public void shouldFaceEast_whenRoverTurnsRight() {
-        assertEquals(moveRover("R"), "0:0:E");
+        assertEquals("0:0:E", moveRover("R"));
     }
 
     @Test
     @Ignore
     public void shouldFaceSouth_whenRoverTurnsRightTwice() {
-        assertEquals(moveRover("RR"), "0:0:S");
+        assertEquals("0:0:S", moveRover("RR"));
     }
 
     private String moveRover(String command) {
