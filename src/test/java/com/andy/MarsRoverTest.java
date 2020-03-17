@@ -16,8 +16,14 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void shouldMoveNorthTwoSquares() {
+    public void shouldMoveNorthNSquares() {
         assertEquals(moveRover("MM"), "0:2:N");
+        assertEquals(moveRover("MMM"), "0:3:N");
+    }
+
+    @Test
+    public void shouldWrapAroundWhenEdgeOfWorld() {
+        assertEquals(moveRover("MMMMMMMMMM"), "0:0:N");
     }
 
     private String moveRover(String command) {

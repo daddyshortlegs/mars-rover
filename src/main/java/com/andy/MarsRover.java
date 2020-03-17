@@ -10,6 +10,9 @@ class MarsRover {
         for (String command : splitCommands) {
             if (command.equals("M")) {
                 numberOfMoves++;
+                if (numberOfMoves > 9) {
+                    numberOfMoves = 0;
+                }
             }
         }
 
