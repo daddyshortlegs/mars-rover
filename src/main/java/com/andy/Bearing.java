@@ -18,6 +18,8 @@ class Bearing {
     public void turnLeft() {
         if (compass == Compass.North) {
             compass = Compass.West;
+        } else if (compass == Compass.West) {
+            compass = Compass.South;
         }
 
     }
