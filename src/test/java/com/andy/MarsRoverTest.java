@@ -12,4 +12,12 @@ public class MarsRoverTest {
         String result = marsRover.execute("");
         assertEquals(result, "0:0:N");
     }
+
+    @Test
+    public void shouldMoveNorthOneSquare() {
+        Grid grid = new Grid();
+        MarsRover marsRover = new MarsRover(grid);
+        String result = marsRover.execute("M");
+        assertEquals(result, "0:1:N");
+    }
 }
