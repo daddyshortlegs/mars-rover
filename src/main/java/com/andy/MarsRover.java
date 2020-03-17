@@ -19,6 +19,8 @@ class MarsRover {
                 }
             } else if (command.equals("R")) {
                 bearing.turnRight();
+            } else if (command.equals("L")) {
+                bearing.turnLeft();
             }
         }
 

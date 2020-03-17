@@ -15,6 +15,13 @@ class Bearing {
         }
     }
 
+    public void turnLeft() {
+        if (compass == Compass.North) {
+            compass = Compass.West;
+        }
+
+    }
+
     @Override
     public String toString() {
         return compass.toString();
