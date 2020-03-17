@@ -33,7 +33,6 @@ public class MarsRoverTest {
     }
 
     @Test
-    @Ignore
     public void shouldFaceSouth_whenRoverTurnsRightTwice() {
         assertEquals("0:0:S", moveRover("RR"));
     }

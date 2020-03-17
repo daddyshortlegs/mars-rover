@@ -17,7 +17,7 @@ class MarsRover {
                 if (numberOfMoves > 9) {
                     numberOfMoves = 0;
                 }
-            } else if (commands.equals("R")) {
+            } else if (command.equals("R")) {
                 bearing.turnRight();
             }
         }
