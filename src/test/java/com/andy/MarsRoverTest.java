@@ -1,5 +1,6 @@
 package com.andy;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -29,7 +30,12 @@ public class MarsRoverTest {
     @Test
     public void shouldFaceEast_whenRoverTurnsRight() {
         assertEquals(moveRover("R"), "0:0:E");
+    }
 
+    @Test
+    @Ignore
+    public void shouldFaceSouth_whenRoverTurnsRightTwice() {
+        assertEquals(moveRover("RR"), "0:0:S");
     }
 
     private String moveRover(String command) {

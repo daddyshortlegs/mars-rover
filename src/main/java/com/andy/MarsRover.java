@@ -1,13 +1,16 @@
 package com.andy;
 
 class MarsRover {
+    private final Grid grid;
+    private Bearing bearing = new Bearing();
+
     public MarsRover(Grid grid) {
+        this.grid = grid;
     }
 
     public String execute(String commands) {
         int numberOfMoves = 0;
         String[] splitCommands = commands.split("");
-        String bearing = "N";
         for (String command : splitCommands) {
             if (command.equals("M")) {
                 numberOfMoves++;
@@ -15,10 +18,11 @@ class MarsRover {
                     numberOfMoves = 0;
                 }
             } else if (commands.equals("R")) {
-                bearing = "E";
+                bearing.turnRight();
             }
         }
 
         return "0:" + numberOfMoves + ":" + bearing;
     }
 }
+
