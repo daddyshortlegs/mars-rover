@@ -2,7 +2,7 @@ package com.andy;
 
 class MarsRover {
     private final Grid grid;
-    private Bearing bearing = new Bearing();
+    private Position position = new Position();
     Coordinate coordinate = new Coordinate(0, 0);
 
     public MarsRover(Grid grid) {
@@ -10,21 +10,18 @@ class MarsRover {
     }
 
     public String execute(String commands) {
-        int numberOfMoves = 0;
         String[] splitCommands = commands.split("");
         for (String command : splitCommands) {
-            Coordinate direction = bearing.getCoordinate();
-
             if (command.equals("M")) {
-                coordinate.add(direction);
+                position.move(coordinate);
             } else if (command.equals("R")) {
-                bearing.turnRight();
+                position.turnRight();
             } else if (command.equals("L")) {
-                bearing.turnLeft();
+                position.turnLeft();
             }
         }
 
-        return coordinate.getX() + ":" + coordinate.getY() + ":" + bearing;
+        return coordinate.getX() + ":" + coordinate.getY() + ":" + position;
     }
 }
 

@@ -1,6 +1,6 @@
 package com.andy;
 
-class Bearing {
+class Position {
     Compass compass = Compass.North;
 
     void turnRight() {
@@ -18,5 +18,9 @@ class Bearing {
 
     public Coordinate getCoordinate() {
         return compass.getCoordinate();
+    }
+
+    public void move(Coordinate coordinate) {
+        coordinate.add(getCoordinate());
     }
 }
