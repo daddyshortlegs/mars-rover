@@ -10,15 +10,7 @@ class Bearing {
     }
 
     public void turnLeft() {
-        if (compass == Compass.North) {
-            compass = Compass.West;
-        } else if (compass == Compass.West) {
-            compass = Compass.South;
-        } else if (compass == Compass.South) {
-            compass = Compass.East;
-        } else if (compass == Compass.East) {
-            compass = Compass.North;
-        }
+        compass = compass.turnLeft();
         coordinate = compass.getCoordinate();
     }
 
