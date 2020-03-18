@@ -2,8 +2,8 @@ package com.andy;
 
 class MarsRover {
     private final Grid grid;
-    private Position position = new Position();
     Coordinate coordinate = new Coordinate(0, 0);
+    private Position position = new Position(coordinate);
 
     public MarsRover(Grid grid) {
         this.grid = grid;
@@ -13,7 +13,7 @@ class MarsRover {
         String[] splitCommands = commands.split("");
         for (String command : splitCommands) {
             if (command.equals("M")) {
-                position.move(coordinate);
+                position.move();
             } else if (command.equals("R")) {
                 position.turnRight();
             } else if (command.equals("L")) {

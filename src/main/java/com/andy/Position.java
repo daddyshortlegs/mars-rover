@@ -1,7 +1,12 @@
 package com.andy;
 
 class Position {
-    Compass compass = Compass.North;
+    private final Coordinate coordinate;
+    private Compass compass = Compass.North;
+
+    public Position(Coordinate coordinate) {
+        this.coordinate = coordinate;
+    }
 
     void turnRight() {
         compass = compass.turnRight();
@@ -20,7 +25,7 @@ class Position {
         return compass.getCoordinate();
     }
 
-    public void move(Coordinate coordinate) {
+    public void move() {
         coordinate.add(getCoordinate());
     }
 }
