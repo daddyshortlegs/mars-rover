@@ -6,6 +6,21 @@ enum Compass {
     South("S", new Coordinate(0, -1)),
     West("W", new Coordinate(-1, 0));
 
+    Compass right;
+    Compass left;
+
+    static {
+        North.right = East;
+        East.right = South;
+        South.right = West;
+        West.right = North;
+
+        North.left = West;
+        East.left = North;
+        South.left = East;
+        West.left = South;
+    }
+
     private final String direction;
     private final Coordinate coordinate;
 
@@ -21,5 +36,13 @@ enum Compass {
 
     public Coordinate getCoordinate() {
         return coordinate;
+    }
+
+    public Compass turnRight() {
+        return right;
+    }
+
+    public Compass turnLeft() {
+        return left;
     }
 }
