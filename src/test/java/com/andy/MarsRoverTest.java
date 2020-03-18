@@ -28,8 +28,18 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void shouldWrapAroundWhenSideOfWorld() {
+    public void shouldWrapAroundWhenBottomOfWorld() {
+        assertEquals("0:0:S", moveRover("LLMMMMMMMMMM"));
+    }
+
+    @Test
+    public void shouldWrapAroundWhenRightSideOfWorld() {
         assertEquals("0:0:E", moveRover("RMMMMMMMMMM"));
+    }
+
+    @Test
+    public void shouldWrapAroundWhenLeftSideOfWorld() {
+        assertEquals("0:0:W", moveRover("LMMMMMMMMMM"));
     }
 
     @Test
