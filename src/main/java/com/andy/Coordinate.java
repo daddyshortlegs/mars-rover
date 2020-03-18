@@ -19,6 +19,7 @@ public class Coordinate {
 
     public void add(Coordinate direction) {
         x += direction.getX();
+        if (x > 9) x = 0;
         y += direction.getY();
         if (y > 9) y = 0;
     }

@@ -23,8 +23,13 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void shouldWrapAroundWhenEdgeOfWorld() {
+    public void shouldWrapAroundWhenTopOfWorld() {
         assertEquals("0:0:N", moveRover("MMMMMMMMMM"));
+    }
+
+    @Test
+    public void shouldWrapAroundWhenSideOfWorld() {
+        assertEquals("0:0:E", moveRover("RMMMMMMMMMM"));
     }
 
     @Test
@@ -72,6 +77,12 @@ public class MarsRoverTest {
         assertEquals("1:0:E", moveRover("RM"));
         assertEquals("2:0:E", moveRover("RMM"));
         assertEquals("0:2:N", moveRover("RRRRMM"));
+    }
+
+    @Test
+    public void shouldMove() {
+        assertEquals("2:3:N", moveRover("MMRMMLM"));
+        assertEquals("0:0:N", moveRover("MMMMMMMMMM"));
     }
 
     private String moveRover(String command) {
