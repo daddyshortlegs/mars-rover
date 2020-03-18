@@ -21,7 +21,7 @@ class MarsRover {
             }
         }
 
-        return coordinate.getX() + ":" + coordinate.getY() + ":" + position;
+        return position.toString();
     }
 }
 

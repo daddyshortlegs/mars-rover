@@ -18,7 +18,7 @@ class Position {
 
     @Override
     public String toString() {
-        return compass.toString();
+        return coordinate.getX() + ":" + coordinate.getY() + ":" + compass.toString();
     }
 
     public Coordinate getCoordinate() {
