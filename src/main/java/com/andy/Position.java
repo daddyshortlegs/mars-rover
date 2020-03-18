@@ -1,12 +1,8 @@
 package com.andy;
 
 class Position {
-    private final Coordinate coordinate;
+    private final Coordinate coordinate = new Coordinate(0, 0);;
     private Compass compass = Compass.North;
-
-    public Position(Coordinate coordinate) {
-        this.coordinate = coordinate;
-    }
 
     void turnRight() {
         compass = compass.turnRight();

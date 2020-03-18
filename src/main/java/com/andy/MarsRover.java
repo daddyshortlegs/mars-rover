@@ -2,8 +2,7 @@ package com.andy;
 
 class MarsRover {
     private final Grid grid;
-    Coordinate coordinate = new Coordinate(0, 0);
-    private Position position = new Position(coordinate);
+    private Position position = new Position();
 
     public MarsRover(Grid grid) {
         this.grid = grid;
