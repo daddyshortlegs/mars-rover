@@ -1,12 +1,11 @@
 package com.andy;
 
 class MarsRover {
-    private final Grid grid;
     private Position position = new Position();
     private RoverCommandFactory roverCommandFactory = new RoverCommandFactory();
 
-    public MarsRover(Grid grid) {
-        this.grid = grid;
+    public MarsRover() {
+
     }
 
     public String execute(String commands) {

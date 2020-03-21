@@ -1,6 +1,5 @@
 package com.andy;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -96,8 +95,7 @@ public class MarsRoverTest {
     }
 
     private String moveRover(String command) {
-        Grid grid = new Grid();
-        MarsRover marsRover = new MarsRover(grid);
+        MarsRover marsRover = new MarsRover();
         return marsRover.execute(command);
     }
 }
