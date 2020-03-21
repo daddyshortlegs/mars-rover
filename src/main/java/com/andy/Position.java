@@ -12,16 +12,12 @@ class Position {
         compass = compass.turnLeft();
     }
 
+    public void move() {
+        coordinate.add(compass.getCoordinate());
+    }
+
     @Override
     public String toString() {
         return coordinate.getX() + ":" + coordinate.getY() + ":" + compass.toString();
-    }
-
-    public Coordinate getCoordinate() {
-        return compass.getCoordinate();
-    }
-
-    public void move() {
-        coordinate.add(getCoordinate());
     }
 }
