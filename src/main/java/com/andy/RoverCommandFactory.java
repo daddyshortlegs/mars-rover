@@ -12,7 +12,10 @@ class RoverCommandFactory {
         commands.put("L", new LeftCommand());
     }
 
-    public Command getCommand(String theCommand) {
-        return commands.get(theCommand);
+    void executeCommand(String textCommand, Position position) {
+        Command command = commands.get(textCommand);
+        if (command != null) {
+            command.execute(position);
+        }
     }
 }
