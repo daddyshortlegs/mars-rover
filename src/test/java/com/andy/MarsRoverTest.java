@@ -95,7 +95,7 @@ public class MarsRoverTest {
     }
 
     private String moveRover(String command) {
-        MarsRover marsRover = new MarsRover(new Position());
+        MarsRover marsRover = new MarsRover(new Grid());
         return marsRover.execute(command);
     }
 }

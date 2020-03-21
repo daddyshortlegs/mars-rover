@@ -1,19 +1,19 @@
 package com.andy;
 
 class MarsRover {
-    private Position position;
+    private Grid grid;
     private RoverCommandFactory roverCommandFactory = new RoverCommandFactory();
 
-    public MarsRover(Position position) {
-        this.position = position;
+    public MarsRover(Grid grid) {
+        this.grid = grid;
     }
 
     public String execute(String commands) {
         for (String command : commands.split("")) {
-            roverCommandFactory.executeCommand(command, position);
+            roverCommandFactory.executeCommand(command, grid);
         }
 
-        return position.toString();
+        return grid.toString();
     }
 }
 

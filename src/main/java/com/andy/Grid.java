@@ -1,6 +1,6 @@
 package com.andy;
 
-class Position {
+class Grid {
     private final Coordinate coordinate = new Coordinate(0, 0);;
     private Compass compass = Compass.North;
 
