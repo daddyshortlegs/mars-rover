@@ -1,11 +1,11 @@
 package com.andy;
 
 class MarsRover {
-    private Position position = new Position();
+    private Position position;
     private RoverCommandFactory roverCommandFactory = new RoverCommandFactory();
 
-    public MarsRover() {
-
+    public MarsRover(Position position) {
+        this.position = position;
     }
 
     public String execute(String commands) {
