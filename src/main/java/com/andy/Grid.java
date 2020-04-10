@@ -15,6 +15,14 @@ class Grid {
 
     public void move() {
         coordinate.add(direction.getCoordinate());
+        checkBoundaries();
+    }
+
+    private void checkBoundaries() {
+        if (coordinate.getX() > 9) coordinate.setX(0);
+        if (coordinate.getX() < 0) coordinate.setX(9);
+        if (coordinate.getY() > 9) coordinate.setY(0);
+        if (coordinate.getY() < 0) coordinate.setY(9);
     }
 
     @Override

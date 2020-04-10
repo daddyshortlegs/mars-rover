@@ -17,12 +17,17 @@ public class Coordinate {
         return y;
     }
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
     public void add(Coordinate direction) {
         x += direction.getX();
-        if (x > 9) x = 0;
-        if (x < 0) x = 9;
         y += direction.getY();
-        if (y > 9) y = 0;
-        if (y < 0) y = 9;
     }
+
 }
