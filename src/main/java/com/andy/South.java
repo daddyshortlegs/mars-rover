@@ -7,12 +7,12 @@ public class South implements Direction {
     }
 
     @Override
-    public void turnleft(Grid grid) {
+    public void turnLeft(Grid grid) {
         grid.setDirection(new East());
     }
 
     @Override
-    public Coordinate getCoordindate() {
+    public Coordinate getCoordinate() {
         return new Coordinate(0, -1);
     }
 

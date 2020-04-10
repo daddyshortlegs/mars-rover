@@ -1,7 +1,7 @@
 package com.andy;
 
 class Grid {
-    private final Coordinate coordinate = new Coordinate(0, 0);;
+    private final Coordinate coordinate = new Coordinate(0, 0);
 
     private Direction direction = new North();
 
@@ -10,11 +10,11 @@ class Grid {
     }
 
     public void turnLeft() {
-        direction.turnleft(this);
+        direction.turnLeft(this);
     }
 
     public void move() {
-        coordinate.add(direction.getCoordindate());
+        coordinate.add(direction.getCoordinate());
     }
 
     @Override
