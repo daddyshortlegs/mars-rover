@@ -8,8 +8,8 @@ class RoverCommandFactory {
 
     RoverCommandFactory() {
         commands.put("M", new MoveCommand());
-        commands.put("R", new RightCommand());
-        commands.put("L", new LeftCommand());
+        commands.put("R", new TurnRight());
+        commands.put("L", new TurnLeft());
     }
 
     void executeCommand(String textCommand, Grid grid) {

@@ -1,6 +1,6 @@
 package com.andy;
 
-class RightCommand implements Command {
+class TurnRight implements Command {
     public void execute(Grid grid) {
         grid.turnRight();
     }
