@@ -1,6 +1,9 @@
 package com.andy;
 
-class Grid {
+import com.andy.compass.Direction;
+import com.andy.compass.North;
+
+public class Grid {
     private final Coordinate coordinate = new Coordinate(0, 0);
 
     private Direction direction = new North();

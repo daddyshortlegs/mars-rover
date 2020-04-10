@@ -1,4 +1,10 @@
-package com.andy;
+package com.andy.compass;
+
+import com.andy.Coordinate;
+import com.andy.Grid;
+import com.andy.compass.Direction;
+import com.andy.compass.North;
+import com.andy.compass.South;
 
 public class West implements Direction {
     @Override

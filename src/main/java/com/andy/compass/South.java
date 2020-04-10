@@ -1,4 +1,7 @@
-package com.andy;
+package com.andy.compass;
+
+import com.andy.Coordinate;
+import com.andy.Grid;
 
 public class South implements Direction {
     @Override
