@@ -17,7 +17,8 @@ public class Grid {
     }
 
     public void move() {
-        coordinate.add(direction.getCoordinate());
+        Coordinate coordinate = direction.getCoordinate();
+        this.coordinate.add(coordinate);
         checkBoundaries();
     }
 
